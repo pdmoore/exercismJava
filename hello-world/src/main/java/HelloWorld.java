@@ -1,9 +1,12 @@
 public class HelloWorld {
     public static String hello(String name) {
+        String returnValue = "Hello, ";
         if (null == name || name.isEmpty()) {
-            return "Hello, World!";
+            returnValue += "World";
         } else {
-            return "Hello, " + name + "!";
+            returnValue += name;
         }
+        returnValue += "!";
+        return returnValue;
     }
 }
