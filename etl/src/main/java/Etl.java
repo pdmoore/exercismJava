@@ -9,9 +9,8 @@ public class Etl {
         Map<String, Integer> values = new HashMap<String, Integer>();
 
         for (Integer key : old.keySet()) {
-            List<String> mappedToKey = old.get(key);
 
-            for (String singleLetter : mappedToKey) {
+            for (String singleLetter : old.get(key)) {
 
                 values.put(singleLetter.toLowerCase(), key);
             }
