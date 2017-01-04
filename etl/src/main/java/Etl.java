@@ -6,11 +6,9 @@ import java.util.Set;
 public class Etl {
     public Map<String, Integer> transform(Map<Integer, List<String>> old) {
 
-        Set<Integer> keys = old.keySet();
-
         Map<String, Integer> values = new HashMap<String, Integer>();
 
-        for (Integer key : keys) {
+        for (Integer key : old.keySet()) {
             List<String> mappedToKey = old.get(key);
 
             for (String singleLetter : mappedToKey) {
@@ -18,7 +16,6 @@ public class Etl {
                 values.put(singleLetter.toLowerCase(), key);
             }
         }
-
 
         return values;
     }
