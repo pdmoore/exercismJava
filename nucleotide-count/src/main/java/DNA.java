@@ -13,10 +13,18 @@ public class DNA {
         _counts = new HashMap<>();
 
         _counts.put('A', 0);
-        _counts.put('C', _dnaString.length());
-        _counts.put('G', 0);
+        _counts.put('C', countOf('C'));
+        _counts.put('G', countOf('G'));
         _counts.put('T', 0);
 
+    }
+
+    private Integer countOf(char c) {
+        int charMatched = 0;
+        for (int i = 0; i < _dnaString.length(); i++) {
+            if (_dnaString.charAt(i) == c) charMatched++;
+        }
+        return charMatched;
     }
 
     public Integer count(char a) {

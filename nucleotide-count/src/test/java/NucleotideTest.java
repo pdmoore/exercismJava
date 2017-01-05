@@ -28,14 +28,12 @@ public class NucleotideTest {
         ));
     }
 
-
     @Test
     public void testRepetitiveCytidineGetsCounted() {
         DNA dna = new DNA("CCCCC");
         assertThat(dna.count('C'), is(5));
     }
 
-    @Ignore
     @Test
     public void testRepetitiveSequenceWithOnlyGuanosine() {
         DNA dna = new DNA("GGGGGGGG");
