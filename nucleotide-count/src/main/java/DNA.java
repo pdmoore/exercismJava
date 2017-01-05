@@ -4,22 +4,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DNA {
+    private final String _dnaString;
+    private Map<Character, Integer> _counts;
+
     public DNA(String dnaString) {
+        _dnaString = dnaString;
+
+        _counts = new HashMap<>();
+
+        _counts.put('A', 0);
+        _counts.put('C', _dnaString.length());
+        _counts.put('G', 0);
+        _counts.put('T', 0);
+
     }
 
     public Integer count(char a) {
-        return new Integer(0);
+        return _counts.get(a);
     }
 
-    public Map<Character,Integer> nucleotideCounts() {
-
-        Map<Character, Integer> counts = new HashMap<>();
-
-        counts.put('A', 0);
-        counts.put('C', 0);
-        counts.put('G', 0);
-        counts.put('T', 0);
-
-        return counts;
+    public Map<Character, Integer> nucleotideCounts() {
+        return _counts;
     }
 }

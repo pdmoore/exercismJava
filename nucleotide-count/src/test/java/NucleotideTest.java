@@ -28,7 +28,7 @@ public class NucleotideTest {
         ));
     }
 
-    @Ignore
+
     @Test
     public void testRepetitiveCytidineGetsCounted() {
         DNA dna = new DNA("CCCCC");
