@@ -8,11 +8,11 @@ public class Etl {
 
         Map<String, Integer> values = new HashMap<String, Integer>();
 
-        for (Integer key : old.keySet()) {
+        for (Integer pointValue : old.keySet()) {
 
-            for (String singleLetter : old.get(key)) {
+            for (String singleLetter : old.get(pointValue)) {
 
-                values.put(singleLetter.toLowerCase(), key);
+                values.put(singleLetter.toLowerCase(), pointValue);
             }
         }
 
