@@ -47,7 +47,6 @@ public class NucleotideTest {
         ));
     }
 
-    @Ignore
     @Test
     public void testCountsOnlyThymidine() {
         DNA dna = new DNA("GGGGGTAACCCGG");

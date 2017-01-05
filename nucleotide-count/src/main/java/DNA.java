@@ -15,7 +15,7 @@ public class DNA {
         _counts.put('A', 0);
         _counts.put('C', countOf('C'));
         _counts.put('G', countOf('G'));
-        _counts.put('T', 0);
+        _counts.put('T', countOf('T'));
 
     }
 
