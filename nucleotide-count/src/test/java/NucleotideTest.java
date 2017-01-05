@@ -60,7 +60,6 @@ public class NucleotideTest {
         assertThat(dna.count('T'), is(2));
     }
 
-    @Ignore
     @Test
     public void testDnaCountsDoNotChangeAfterCountingAdenosine() {
         DNA dna = new DNA("GATTACA");

@@ -12,7 +12,7 @@ public class DNA {
 
         _counts = new HashMap<>();
 
-        _counts.put('A', 0);
+        _counts.put('A', countOf('A'));
         _counts.put('C', countOf('C'));
         _counts.put('G', countOf('G'));
         _counts.put('T', countOf('T'));
