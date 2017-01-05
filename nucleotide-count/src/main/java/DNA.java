@@ -19,19 +19,27 @@ public class DNA {
 
     }
 
-    private Integer countOf(char c) {
+    private Integer countOf(char nucleotide) {
         int charMatched = 0;
         for (int i = 0; i < _dnaString.length(); i++) {
-            if (_dnaString.charAt(i) == c) charMatched++;
+            if (_dnaString.charAt(i) == nucleotide) charMatched++;
         }
         return charMatched;
     }
 
-    public Integer count(char a) {
-        return _counts.get(a);
+    public Integer count(char nucleotide) {
+        validateInput(nucleotide);
+        return _counts.get(nucleotide);
     }
 
     public Map<Character, Integer> nucleotideCounts() {
         return _counts;
+    }
+
+
+    private void validateInput(char nucleotide) {
+        String validNucleotides = "ACGT";
+        if (validNucleotides.indexOf(nucleotide) == -1)
+            throw new IllegalArgumentException(nucleotide + " is not a nucleotide");
     }
 }

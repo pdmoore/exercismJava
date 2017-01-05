@@ -74,7 +74,6 @@ public class NucleotideTest {
         ));
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException.class)
     public void testValidatesNucleotides() {
         DNA dna = new DNA("GACT");
