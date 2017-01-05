@@ -1,3 +1,6 @@
+import org.omg.CORBA.INTERNAL;
+
+import java.util.HashMap;
 import java.util.Map;
 
 public class DNA {
@@ -9,6 +12,14 @@ public class DNA {
     }
 
     public Map<Character,Integer> nucleotideCounts() {
-        return null;
+
+        Map<Character, Integer> counts = new HashMap<>();
+
+        counts.put('A', 0);
+        counts.put('C', 0);
+        counts.put('G', 0);
+        counts.put('T', 0);
+
+        return counts;
     }
 }
