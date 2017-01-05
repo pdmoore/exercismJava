@@ -81,7 +81,6 @@ public class NucleotideTest {
         dna.count('X');
     }
 
-    @Ignore
     @Test
     public void testCountsAllNucleotides() {
         String s = "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC";
