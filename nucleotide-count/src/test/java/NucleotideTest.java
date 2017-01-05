@@ -14,7 +14,7 @@ public class NucleotideTest {
         assertThat(dna.count('A'), is(0));
     }
 
-    @Ignore
+
     @Test
     public void testEmptyDnaStringHasNoNucleotides() {
         DNA dna = new DNA("");
