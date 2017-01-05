@@ -2,4 +2,5 @@
 *.md
 */build
 */.gradle
+*/.idea
 
