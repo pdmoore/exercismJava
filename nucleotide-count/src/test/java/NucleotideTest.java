@@ -53,7 +53,6 @@ public class NucleotideTest {
         assertThat(dna.count('T'), is(1));
     }
 
-    @Ignore
     @Test
     public void testCountsANucleotideOnlyOnce() {
         DNA dna = new DNA("CGATTGGG");
