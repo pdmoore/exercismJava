@@ -31,11 +31,7 @@ public class DNA {
     }
 
     private Integer countOf(char nucleotide) {
-        int charMatched = 0;
-        for (int i = 0; i < _dnaString.length(); i++) {
-            if (_dnaString.charAt(i) == nucleotide) charMatched++;
-        }
-        return charMatched;
+        return _dnaString.length() - _dnaString.replace(Character.toString(nucleotide), "").length();
     }
 
     private void validateInput(char nucleotide) {
