@@ -25,7 +25,6 @@ public class WordCountTest {
         );
     }
 
-    @Ignore
     @Test
     public void countOneOfEach() {
         Map<String, Integer> actualWordCount = new HashMap<String, Integer>();
