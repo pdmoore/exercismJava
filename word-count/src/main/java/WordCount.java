@@ -6,6 +6,7 @@ public class WordCount {
 
         Map<String, Integer> words = new HashMap<>();
         for (String singleWord : allWords) {
+            singleWord = singleWord.toLowerCase();
             if (false == words.containsKey(singleWord)) {
                 words.put(singleWord, 1);
             } else {

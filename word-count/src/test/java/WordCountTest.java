@@ -88,7 +88,6 @@ public class WordCountTest {
         );
     }
 
-    @Ignore
     @Test
     public void normalizeCase() {
         Map<String, Integer> actualWordCount = new HashMap<String, Integer>();
