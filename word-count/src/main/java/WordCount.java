@@ -2,15 +2,24 @@ import java.util.*;
 
 public class WordCount {
     public Map<String,Integer> phrase(String sentence) {
-        Map<String, Integer> result = new HashMap<>();
-        
         List<String> allWords = split(sentence);
 
-        for ( String singleWord : allWords) {
-            result.put(singleWord, 1);
-                    }
-                
-        
+        Map<String, Integer> words = new HashMap<>();
+        for (String singleWord : allWords) {
+            if (false == words.containsKey(singleWord)) {
+                words.put(singleWord, 1);
+            } else {
+                Integer currentCount = words.get(singleWord);
+                currentCount++;
+                words.put(singleWord, currentCount);
+            }
+        }
+
+        Map<String, Integer> result = new HashMap<>();
+        for (String eachKey : words.keySet()) {
+            result.put(eachKey, words.get(eachKey));
+        }
+
         return result;
     }
 
