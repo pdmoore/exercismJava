@@ -27,13 +27,12 @@ public class WordCount {
     }
 
     private String stripPunction(String sentence) {
-
-        String s = sentence.replaceAll("[^a-zA-Z0-9\\s]", "");
+        String s = sentence.replaceAll("[^a-zA-Z\\s]", "");
         return s;
     }
 
     private List<String> split(String sentence) {
-        String[] split = sentence.split("[^a-zA-Z0-9]");
+        String[] split = sentence.split("[^a-zA-Z]");
         return Arrays.asList(split);
     }
 }
