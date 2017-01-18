@@ -42,7 +42,6 @@ public class PangramsTest {
         assertFalse(Pangrams.isPangram("\"7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog\""));
     }
 
-    @Ignore
     @Test
     public void pangramWithMixedCaseAndPunctuation() {
         assertTrue(Pangrams.isPangram("\"Five quacking Zephyrs jolt my wax bed.\""));
