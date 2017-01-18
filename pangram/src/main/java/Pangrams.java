@@ -3,6 +3,11 @@
  */
 public class Pangrams {
     public static boolean isPangram(String sentence) {
-        return false;
+        for (Character c = 'a'; c <= 'z'; c++) {
+            if (sentence.indexOf(c) == -1) {
+                return false;
+            }
+        }
+        return true;
     }
 }

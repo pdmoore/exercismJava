@@ -12,7 +12,6 @@ public class PangramsTest {
         assertFalse(Pangrams.isPangram(""));
     }
 
-    @Ignore
     @Test
     public void pangramWithOnlyLowerCase() {
         assertTrue(Pangrams.isPangram("the quick brown fox jumps over the lazy dog"));
