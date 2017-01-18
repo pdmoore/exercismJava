@@ -47,7 +47,6 @@ public class PangramsTest {
         assertTrue(Pangrams.isPangram("\"Five quacking Zephyrs jolt my wax bed.\""));
     }
 
-    @Ignore
     @Test
     public void pangramWithNonAsciiCharacters() {
         assertTrue(Pangrams.isPangram("Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich."));
