@@ -27,19 +27,16 @@ public class PangramsTest {
         assertFalse(Pangrams.isPangram("the quick brown fish jumps over the lazy dog"));
     }
 
-    @Ignore
     @Test
     public void pangramWithUnderscores() {
         assertTrue(Pangrams.isPangram("\"the_quick_brown_fox_jumps_over_the_lazy_dog\""));
     }
 
-    @Ignore
     @Test
     public void pangramWithNumbers() {
         assertTrue(Pangrams.isPangram("\"the 1 quick brown fox jumps over the 2 lazy dogs\""));
     }
 
-    @Ignore
     @Test
     public void missingLettersReplacedByNumbers() {
         assertFalse(Pangrams.isPangram("\"7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog\""));
@@ -57,8 +54,6 @@ public class PangramsTest {
         assertTrue(Pangrams.isPangram("Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich."));
     }
 
-
-    @Ignore
     @Test
     public void panagramInAlphabetOtherThanAscii() {
         assertFalse(Pangrams.isPangram("Широкая электрификация южных губерний даст мощный толчок подъёму сельского хозяйства."));
