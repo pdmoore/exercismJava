@@ -6,25 +6,25 @@ import java.util.Set;
  */
 public class Pangrams {
     public static boolean isPangram(String sentence) {
-//        sentence = sentence.toLowerCase();
-//
-//        for (Character c = 'a'; c <= 'z'; c++) {
-//            if (sentence.indexOf(c) == -1) {
-//                return false;
-//            }
-//        }
-//        return true;
+        Set<Character> allLetters = new HashSet<Character>();
 
         char[] chars = sentence.toCharArray();
-        Set<Character> allLetters = new HashSet<Character>();
         for (int i = 0; i < chars.length; i++) {
             char thisChar = chars[i];
-            if ((thisChar >= 'a' && thisChar <= 'z') || (thisChar >= 'A' && thisChar <='Z')) {
+            if (isLetter(thisChar)) {
                 allLetters.add(Character.toLowerCase(thisChar));
-                if (allLetters.size() == 26) return true;
+                if (sentenceContainsAllLetters(allLetters)) return true;
             }
         }
 
         return false;
+    }
+
+    private static boolean sentenceContainsAllLetters(Set<Character> allLetters) {
+        return allLetters.size() == 26;
+    }
+
+    private static boolean isLetter(char thisChar) {
+        return (thisChar >= 'a' && thisChar <= 'z') || (thisChar >= 'A' && thisChar <='Z');
     }
 }
