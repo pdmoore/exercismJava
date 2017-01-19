@@ -8,23 +8,24 @@ public class Pangrams {
     public static boolean isPangram(String sentence) {
         Set<Character> allLetters = new HashSet<Character>();
 
-        char[] chars = sentence.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            char thisChar = chars[i];
-            if (isLetter(thisChar)) {
-                allLetters.add(Character.toLowerCase(thisChar));
-                if (sentenceContainsAllLetters(allLetters)) return true;
-            }
-        }
+        sentence.chars()
+                .mapToObj(i -> (char)i)
+                .forEach(letter -> captureAllLetters(letter, allLetters));
 
-        return false;
+        return sentenceContainsAllLetters(allLetters);
     }
 
-    private static boolean sentenceContainsAllLetters(Set<Character> allLetters) {
-        return allLetters.size() == 26;
+    private static void captureAllLetters(char letter, Set<Character> allLetters) {
+        if (isLetter(letter)) {
+            allLetters.add(Character.toLowerCase(letter));
+        }
     }
 
     private static boolean isLetter(char thisChar) {
         return (thisChar >= 'a' && thisChar <= 'z') || (thisChar >= 'A' && thisChar <='Z');
+    }
+
+    private static boolean sentenceContainsAllLetters(Set<Character> allLetters) {
+        return allLetters.size() == 26;
     }
 }
