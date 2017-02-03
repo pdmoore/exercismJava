@@ -1,32 +1,30 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Anagram {
+    private final String _baseWordSorted;
     private final String _baseWord;
 
     public Anagram(String baseWord) {
-        _baseWord = sortedStringOfLetters(baseWord);
+        _baseWord = baseWord;
+        _baseWordSorted = sortedStringOfLetters(baseWord);
     }
 
     public List<String> match(List<String> possibleAnagrams) {
 
-        List<String> verifiedAnagrams = new ArrayList<>();
+        List<String> verifiedAnagrams = possibleAnagrams.stream().
+                filter(word -> !word.equals(_baseWord)).
+                filter(word -> word.length() == _baseWordSorted.length()).
+                filter(this::collectionOfLettersMatch).
+                collect(Collectors.toList());
 
-        for (String word : possibleAnagrams) {
-            if (word.length() == _baseWord.length()) {
-                if (collectionOfLettersMatch(word)) {
-                    verifiedAnagrams.add(word);
-                }
-            }
-        }
-        
         return verifiedAnagrams;
     }
 
     private boolean collectionOfLettersMatch(String word) {
-        return _baseWord.equals(sortedStringOfLetters(word));
+        return _baseWordSorted.equals(sortedStringOfLetters(word));
     }
 
     private String sortedStringOfLetters(String baseWord) {

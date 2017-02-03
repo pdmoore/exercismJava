@@ -38,7 +38,6 @@ public class AnagramTest {
         assertTrue(anagrams.isEmpty());
     }
 
-    @Ignore
     @Test
     public void testIdenticalWordIsNotAnagram() {
         Anagram detector = new Anagram("corn");
