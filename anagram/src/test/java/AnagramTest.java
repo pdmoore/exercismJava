@@ -72,7 +72,6 @@ public class AnagramTest {
         assertThat(anagrams, allOf(hasItem("gallery"), hasItem("largely"), hasItem("regally")));
     }
 
-    @Ignore
     @Test
     public void testAnagramsAreCaseInsensitive() {
         Anagram detector = new Anagram("Orchestra");

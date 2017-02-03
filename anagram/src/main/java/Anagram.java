@@ -9,13 +9,13 @@ public class Anagram {
 
     public Anagram(String baseWord) {
         _baseWord = baseWord;
-        _baseWordSorted = sortedStringOfLetters(baseWord);
+        _baseWordSorted = sortedStringOfLetters(baseWord.toLowerCase());
     }
 
     public List<String> match(List<String> possibleAnagrams) {
 
         List<String> verifiedAnagrams = possibleAnagrams.stream().
-                filter(word -> !word.equals(_baseWord)).
+                filter(word -> !word.toLowerCase().equals(_baseWord.toLowerCase())).
                 filter(word -> word.length() == _baseWordSorted.length()).
                 filter(this::collectionOfLettersMatch).
                 collect(Collectors.toList());
@@ -24,7 +24,7 @@ public class Anagram {
     }
 
     private boolean collectionOfLettersMatch(String word) {
-        return _baseWordSorted.equals(sortedStringOfLetters(word));
+        return _baseWordSorted.equals(sortedStringOfLetters(word.toLowerCase()));
     }
 
     private String sortedStringOfLetters(String baseWord) {
