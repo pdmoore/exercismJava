@@ -7,34 +7,31 @@ public class Anagram {
     private final String _baseWord;
 
     public Anagram(String baseWord) {
-        char[] chars = baseWord.toCharArray();
-        Arrays.sort(chars);
-        _baseWord = new String(chars);
+        _baseWord = sortedStringOfLetters(baseWord);
     }
 
     public List<String> match(List<String> possibleAnagrams) {
 
         List<String> verifiedAnagrams = new ArrayList<>();
 
-        for (String word :
-                possibleAnagrams) {
+        for (String word : possibleAnagrams) {
             if (word.length() == _baseWord.length()) {
                 if (collectionOfLettersMatch(word)) {
                     verifiedAnagrams.add(word);
                 }
             }
         }
-
-
+        
         return verifiedAnagrams;
     }
 
     private boolean collectionOfLettersMatch(String word) {
+        return _baseWord.equals(sortedStringOfLetters(word));
+    }
 
-        char[] chars = word.toCharArray();
+    private String sortedStringOfLetters(String baseWord) {
+        char[] chars = baseWord.toCharArray();
         Arrays.sort(chars);
-        String newWord = new String(chars);
-
-        return _baseWord.equals(newWord);
+        return new String(chars);
     }
 }
