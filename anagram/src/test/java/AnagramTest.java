@@ -23,8 +23,7 @@ public class AnagramTest {
         assertThat(anagram, hasItem("tan"));
         assertThat(anagram.size(), is(1));
     }
-
-    @Ignore
+    
     @Test
     public void testDetectMultipleAnagrams() {
         Anagram detector = new Anagram("master");
