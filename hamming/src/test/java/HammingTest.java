@@ -17,13 +17,11 @@ public class HammingTest {
         assertThat(Hamming.compute("A", "G"), is(1));
     }
 
-    @Ignore
     @Test
     public void testCompleteHammingDistanceForSmallStrand() {
         assertThat(Hamming.compute("AG", "CT"), is(2)); 
     }
 
-    @Ignore
     @Test
     public void testSmallHammingDistance() {
         assertThat(Hamming.compute("AT", "CT"), is(1));
