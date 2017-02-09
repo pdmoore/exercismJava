@@ -27,7 +27,6 @@ public class HammingTest {
         assertThat(Hamming.compute("AT", "CT"), is(1));
     }
 
-    @Ignore
     @Test
     public void testSmallHammingDistanceInLongerStrand() {
         assertThat(Hamming.compute("GGACG", "GGTCG"), is(1));
