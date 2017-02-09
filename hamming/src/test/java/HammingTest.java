@@ -42,13 +42,11 @@ public class HammingTest {
         Hamming.compute("AAA", "AAAG");
     }
 
-    @Ignore
     @Test
     public void testLargeHammingDistance() {
         assertThat(Hamming.compute("GATACA", "GCATAA"), is(4));
     }
 
-    @Ignore
     @Test
     public void testHammingDistanceInVeryLongStrand() {
         assertThat(Hamming.compute("GGACGGATTCTG", "AGGACGGATTCT"), is(9));
