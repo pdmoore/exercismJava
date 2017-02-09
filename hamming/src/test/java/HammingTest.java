@@ -32,13 +32,11 @@ public class HammingTest {
         assertThat(Hamming.compute("GGACG", "GGTCG"), is(1));
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException.class)
     public void testValidatesFirstStrandNotLonger() {
         Hamming.compute("AAAG", "AAA");
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException.class)
     public void testValidatesOtherStrandNotLonger() {
         Hamming.compute("AAA", "AAAG");
