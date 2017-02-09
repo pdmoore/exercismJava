@@ -1,5 +1,7 @@
 public class Hamming {
-    public static <T> Integer compute(String a, String a1) {
-        return 0;
+    public static <T> Integer compute(String dnaStrand, String otherStrand) {
+        if (dnaStrand.equals(otherStrand)) return 0;
+
+        return 1;
     }
 }

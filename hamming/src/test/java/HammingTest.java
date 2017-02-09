@@ -12,7 +12,6 @@ public class HammingTest {
         assertThat(Hamming.compute("A", "A"), is(0));
     }
 
-    @Ignore
     @Test
     public void testCompleteHammingDistanceOfForSingleNucleotideStrand() {
         assertThat(Hamming.compute("A", "G"), is(1));
