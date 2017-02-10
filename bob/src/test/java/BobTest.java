@@ -31,7 +31,6 @@ public class BobTest {
         );
     }
 
-    @Ignore
     @Test
     public void askingANumericQuestion() {
         assertEquals(
@@ -40,7 +39,6 @@ public class BobTest {
         );
     }
 
-    @Ignore
     @Test
     public void talkingForcefully() {
         assertEquals(
