@@ -8,6 +8,7 @@ public class Hamming {
         for (int i = 0; i < dnaStrand.length(); i++) {
             if (dnaStrand.charAt(i) != otherStrand.charAt(i)) ++differences;
         }
+
         return differences;
     }
 }
