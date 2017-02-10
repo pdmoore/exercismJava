@@ -47,7 +47,6 @@ public class BobTest {
         );
     }
 
-    @Ignore
     @Test
     public void usingAcronymsInRegularSpeech() {
         assertEquals(
@@ -55,7 +54,6 @@ public class BobTest {
         );
     }
 
-    @Ignore
     @Test
     public void forcefulQuestions() {
         assertEquals(
@@ -63,7 +61,6 @@ public class BobTest {
         );
     }
 
-    @Ignore
     @Test
     public void shoutingNumbers() {
         assertEquals(

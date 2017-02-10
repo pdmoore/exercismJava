@@ -1,3 +1,5 @@
+import java.util.regex.Pattern;
+
 /**
  * Created by pdm on 2/9/17.
  */
@@ -15,6 +17,10 @@ public class Bob {
     }
 
     private boolean isShouting(String whatBobHears) {
-        return whatBobHears.toUpperCase().equals(whatBobHears);
+        return isAStatement(whatBobHears) && whatBobHears.toUpperCase().equals(whatBobHears);
+    }
+
+    private boolean isAStatement(String whatBobHears) {
+        return whatBobHears.matches(".*[A-Z].*");
     }
 }
