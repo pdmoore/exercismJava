@@ -13,7 +13,7 @@ public class Bob {
     }
 
     private boolean isAQuestion(String whatBobHears) {
-        return whatBobHears.contains("?");
+        return whatBobHears.endsWith("?");
     }
 
     private boolean isShouting(String whatBobHears) {

@@ -110,7 +110,6 @@ public class BobTest {
         );
     }
 
-    @Ignore
     @Test
     public void statementContainingQuestionMark() {
         assertEquals(
