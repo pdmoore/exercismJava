@@ -5,11 +5,17 @@ import java.util.regex.Pattern;
  */
 public class Bob {
     public String hey(String whatBobHears) {
+        if (isSilence(whatBobHears)) return "Fine. Be that way!";
+
         if (isShouting(whatBobHears)) return "Whoa, chill out!";
 
         if (isAQuestion(whatBobHears)) return "Sure.";
 
         return "Whatever.";
+    }
+
+    private boolean isSilence(String whatBobHears) {
+        return whatBobHears.trim().isEmpty();
     }
 
     private boolean isAQuestion(String whatBobHears) {

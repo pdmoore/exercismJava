@@ -124,7 +124,6 @@ public class BobTest {
         );
     }
 
-    @Ignore
     @Test
     public void silence() {
         assertEquals(
@@ -132,7 +131,6 @@ public class BobTest {
         );
     }
 
-    @Ignore
     @Test
     public void prolongedSilence() {
         assertEquals(
