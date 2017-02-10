@@ -4,7 +4,9 @@
 public class Bob {
     public String hey(String whatBobHears) {
         if (whatBobHears.contains("!")) return "Whoa, chill out!";
-        
+
+        if (whatBobHears.contains("?")) return "Sure.";
+
         return "Whatever.";
     }
 }
