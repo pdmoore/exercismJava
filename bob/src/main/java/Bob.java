@@ -5,9 +5,13 @@ public class Bob {
     public String hey(String whatBobHears) {
         if (isShouting(whatBobHears)) return "Whoa, chill out!";
 
-        if (whatBobHears.contains("?")) return "Sure.";
+        if (isAQuestion(whatBobHears)) return "Sure.";
 
         return "Whatever.";
+    }
+
+    private boolean isAQuestion(String whatBobHears) {
+        return whatBobHears.contains("?");
     }
 
     private boolean isShouting(String whatBobHears) {
